@@ -5,7 +5,7 @@ RSpec.describe BotSavesPrincess do
     let(:bsp) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
 
     it 'exists' do
-      expect(bsp.to be_a(BotSavesPrincess))
+      expect(bsp).to be_a(BotSavesPrincess)
     end
 
     it 'has a size attribute' do
@@ -18,6 +18,8 @@ RSpec.describe BotSavesPrincess do
   end
 
   context 'locate_character_location' do
+    let(:bsp) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
+
     it 'can locate the princess' do
       expect(bsp.locate_character_location("p")).to eq([2, 0])
     end
@@ -27,7 +29,9 @@ RSpec.describe BotSavesPrincess do
     end
   end
 
-  context 'path to princess' do 
+  context 'path to princess' do
+    let(:bsp) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
+
     it 'can decipher path to princess' do
       expect(bsp.display_path_to_princess).to eq(["DOWN", "LEFT"])
     end

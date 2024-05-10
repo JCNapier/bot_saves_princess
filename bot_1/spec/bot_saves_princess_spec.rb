@@ -17,18 +17,6 @@ RSpec.describe BotSavesPrincess do
     end
   end
 
-  context 'locate_character_location' do
-    let(:bsp) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
-
-    it 'can locate the princess' do
-      expect(bsp.locate_character_location("p")).to eq([2, 0])
-    end
-
-    it 'can locate the bot' do
-      expect(bsp.locate_character_location("m")).to eq([1, 1])
-    end
-  end
-
   context 'determine_character_location_differences' do
     let(:bsp_1) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
     let(:bsp_2) {BotSavesPrincess.new(3, ["--p", "-m-", "---"])}

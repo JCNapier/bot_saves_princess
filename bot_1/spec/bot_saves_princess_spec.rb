@@ -30,10 +30,18 @@ RSpec.describe BotSavesPrincess do
   end
 
   context 'path to princess' do
-    let(:bsp) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
+    let(:bsp_1) {BotSavesPrincess.new(3, ["---", "-m-", "p--"])}
+    let(:bsp_2) {BotSavesPrincess.new(3, ["--p", "-m-", "---"])}
+    let(:bsp_3) {BotSavesPrincess.new(5, ["-p---", "-----","--m--", "-----", "-----"])}
 
-    it 'can decipher path to princess' do
-      expect(bsp.display_path_to_princess).to eq(["DOWN", "LEFT"])
+    it 'can decipher path to princess 3x3 grid' do
+      expect(bsp_1.display_path_to_princess).to eq(["DOWN", "LEFT"])
+      expect(bsp_2.display_path_to_princess).to eq(["UP", "RIGHT"])
+      expect(bsp_3.display_path_to_princess).to eq(["UP", "UP", "LEFT"])
+    end
+
+    it 'can decipher path to princess 5x5 grid' do
+      expect(bsp_3.display_path_to_princess).to eq(["UP", "UP", "LEFT"])
     end
   end
 end

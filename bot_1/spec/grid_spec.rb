@@ -15,6 +15,14 @@ RSpec.describe Grid do
     it 'has a grid attribute' do
       expect(grid.grid).to eq(["---", "-m-", "p--"])
     end
+
+    it 'has a bot location attribute' do 
+      expect(grid.bot_location).to eq([1, 1])
+    end
+
+    it 'has a princess location attribute' do 
+      expect(grid.princess_location).to eq([2, 0])
+    end
   end
 
   context 'locate_character_location' do

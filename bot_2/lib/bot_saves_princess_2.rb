@@ -28,4 +28,9 @@ class BotSavesPrincess
     
     moves.flatten
   end
+
+  def next_move
+    moves = display_path_to_princess
+    if @bot_location[0] == @princess_location[0]; moves[1] else moves[0] end
+  end
 end

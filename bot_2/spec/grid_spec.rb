@@ -16,8 +16,8 @@ RSpec.describe do
       expect(grid.row).to eq(2)
     end
 
-    it 'has a row attribute' do 
-      expect(grid.row).to eq(3)
+    it 'has a column attribute' do 
+      expect(grid.column).to eq(3)
     end
   end
 
@@ -30,7 +30,7 @@ RSpec.describe do
     end
 
     it 'can build a 7x7 grid' do
-      expect(grid_2.build_grid).to eq(["-----", "-----","-----", "-----", "-----", "-----", "-----"])
+      expect(grid_2.build_grid).to eq(["-------", "-------","-------", "-------", "-------", "-------", "-------"])
     end
   end
 
@@ -40,7 +40,7 @@ RSpec.describe do
     it 'can place the bot' do 
       new_grid = grid.build_grid
 
-      expect(grid.place_bot(new_grid)).to eq(["-----", "-----","---m-", "-----", "-----", "-----", "-----"])
+      expect(grid.place_bot(new_grid)).to eq(["-----", "-----","---m-", "-----", "-----"])
     end
   end
 end

@@ -23,8 +23,8 @@ class BotSavesPrincess
 
     column_movement, row_movement = determine_character_location_differences
     
-    if column_movement.negative?; moves << (["DOWN"]) else moves << (["UP"]) end
-    if row_movement.negative?; moves << (["RIGHT"]) else moves << (["LEFT"]) end
+    if column_movement.negative?; moves << (["DOWN"] * column_movement.abs) else moves << (["UP"] * column_movement) end
+    if row_movement.negative?; moves << (["RIGHT"] * row_movement.abs) else moves << (["LEFT"] * row_movement) end
     
     moves.flatten
   end

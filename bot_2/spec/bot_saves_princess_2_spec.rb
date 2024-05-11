@@ -44,5 +44,20 @@ RSpec.describe BotSavesPrincess do
     it 'can return first vertical and horizontal move for 7x7 grid' do
       expect(bsp_2.display_path_to_princess).to eq(["DOWN", "LEFT"])
     end
-  end  
+  end 
+
+    context 'next_move' do
+    let(:grid_1) {Grid.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
+    let(:grid_2) {Grid.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
+    let(:bsp_1) {BotSavesPrincess.new(grid_1)}
+    let(:bsp_2) {BotSavesPrincess.new(grid_2)}
+
+    it 'can return first vertical and horizontal move for 5x5 grid' do
+      expect(bsp_1.next_move).to eq(["LEFT"])
+    end
+
+    it 'can return first vertical and horizontal move for 7x7 grid' do
+      expect(bsp_2.next_move).to eq(["DOWN"])
+    end
+  end 
 end

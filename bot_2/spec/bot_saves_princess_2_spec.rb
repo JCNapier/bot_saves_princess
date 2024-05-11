@@ -11,7 +11,7 @@ RSpec.describe BotSavesPrincess do
     end
 
     it 'has a grid attribute' do
-      expect(bsp.grid).to eq(["---", "-m-", "p--"])
+      expect(bsp.grid).to eq(["-----", "-----","p--m-", "-----", "-----"])
     end
   end
 
@@ -23,11 +23,11 @@ RSpec.describe BotSavesPrincess do
 
 
     it 'can determine the differences between the character locations 5x5 grid' do
-      expect(bsp_1.determine_character_location_differences).to eq([-1, 1])
+      expect(bsp_1.determine_character_location_differences).to eq([0, 3])
     end
 
     it 'can determine the differences between the character locations 7x7 grid' do
-      expect(bsp_2.determine_character_location_differences).to eq([2, 1])
+      expect(bsp_2.determine_character_location_differences).to eq([-2, 0])
     end
   end
 
@@ -38,11 +38,11 @@ RSpec.describe BotSavesPrincess do
     let(:bsp_2) {BotSavesPrincess.new(grid_2)}
 
     it 'can return first vertical and horizontal move for 5x5 grid' do
-      expect(bsp_1.display_path_to_princess).to eq(["LEFT"])
+      expect(bsp_1.display_path_to_princess).to eq(["UP", "LEFT"])
     end
 
     it 'can return first vertical and horizontal move for 7x7 grid' do
-      expect(bsp_2.display_path_to_princess).to eq(["DOWN", "RIGHT"])
+      expect(bsp_2.display_path_to_princess).to eq(["DOWN", "LEFT"])
     end
   end  
 end

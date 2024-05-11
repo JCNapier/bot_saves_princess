@@ -28,12 +28,12 @@ RSpec.describe BotSavesPrincess do
       expect(bsp_2.determine_character_location_differences).to eq([1, -1])
     end
 
-    it 'can determine the differences between the character locations 3x3 grid' do
+    it 'can determine the differences between the character locations 5x5 grid' do
       expect(bsp_3.determine_character_location_differences).to eq([2, 1])
     end
   end
 
-  context 'path to princess' do
+  context 'display_path_to_princess' do
     let(:grid_1) {Grid.new(3, ["---", "-m-", "p--"])}
     let(:grid_2) {Grid.new(3, ["--p", "-m-", "---"])}
     let(:grid_3) {Grid.new(5, ["-p---", "-----","--m--", "-----", "-----"])}

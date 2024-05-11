@@ -1,4 +1,4 @@
-require './lib/grid' 
+require './lib/grid_2' 
 
 RSpec.describe do 
   context 'initialize' do

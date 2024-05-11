@@ -43,4 +43,18 @@ RSpec.describe do
       expect(grid.place_bot(new_grid)).to eq(["-----", "-----","---m-", "-----", "-----"])
     end
   end
+
+  context 'place_princess' do 
+    let(:grid) {GRid.new(5, 2, 3)}
+
+    it 'can place the princess' do
+      new_grid = grid.build_grid 
+      grid_with_bot = grid.place_bot(new_grid)
+      grid_with_princess = grid.place_princess(grid_with_bot)
+
+      expect(grid_with_princess).length.to eq(5)
+      expect(grid_with_princess.join.include?("p")).to be(true)
+      expect(grid_with_princess.join.include?("m")).to be(true)
+    end
+  end
 end

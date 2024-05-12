@@ -42,9 +42,13 @@
 ## Project Description
 
 Bot Saves Princess & Bot Saves Princess 2 are independent challenges that are found on the Hacker Rank Website.
-- Bot Saves Princess Description: Princess Peach is trapped in one of the four corners of a square grid. You are in the center of the grid and can move one step at a time in any of the four directions. Can you rescue the princess? Complete the function displayPathtoPrincess which takes in two parameters - the integer N and the character array grid. The grid will be formatted exactly as you see it in the input, so for the sample input the princess is at grid[2][0]. The function shall output moves (LEFT, RIGHT, UP or DOWN) on consecutive lines to rescue/reach the princess. The goal is to reach the princess in as few moves as possible. 
+### Bot Saves Princess Description: 
+- Princess Peach is trapped in one of the four corners of a square grid. You are in the center of the grid and can move one step at a time in any of the four directions. Can you rescue the princess?
+- Complete the function displayPathtoPrincess which takes in two parameters - the integer N and the character array grid. The grid will be formatted exactly as you see it in the input, so for the sample input the princess is at grid[2][0]. The function shall output moves (LEFT, RIGHT, UP or DOWN) on consecutive lines to rescue/reach the princess. The goal is to reach the princess in as few moves as possible. 
 
-- Bot Saves Princess 2 Description: In this version of "Bot saves princess", Princess Peach and bot's position are randomly set. Can you save the princess? Complete the function nextMove which takes in 4 parameters - an integer N, integers r and c indicating the row & column position of the bot and the character array grid - and outputs the next move the bot makes to rescue the princess.
+### Bot Saves Princess 2 Description: 
+- In this version of "Bot saves princess", Princess Peach and bot's position are randomly set. Can you save the princess?
+- Complete the function nextMove which takes in 4 parameters - an integer N, integers r and c indicating the row & column position of the bot and the character array grid - and outputs the next move the bot makes to rescue the princess.
 
 The links to each Hacker Rank Challege are below:
 1. [Bot Saves Princess](https://www.hackerrank.com/challenges/saveprincess)

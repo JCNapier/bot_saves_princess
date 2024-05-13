@@ -1,3 +1,4 @@
+require 'spec_helper'
 require './lib/bot_1/game_play'  
 
 RSpec.describe GamePlay do

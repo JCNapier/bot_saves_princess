@@ -84,6 +84,7 @@ The links to each Hacker Rank Challege are below:
   - rspec-mocks 3.13.1
   - rspec-rails 5.1.2
   - rspec-support 3.13.1
+2. [simplecov 0.22.0](https://rubygems.org/gems/simplecov/versions/0.22.0?locale=en)
 
 ## Setup 
 This repo makes use of a `Gemfile`. Run the following commands to install the Ruby Gems used, and create a `Gemfile.lock` file before interacting with the project or attempting to run the test suite:
@@ -126,6 +127,7 @@ To play the game, ```cd``` into the root directory of the repo and run the follo
 
 ## Running the Test Suite
 There are currently a total of 41 unit tests in this project. To run the test suite ```cd``` into the root directory of the repo and run the following terminal command: `bundle exec rspec spec`. You may also run the terminal command: `rspec`
+Currently the test coverage is 72.27% and that is only because of the `gets.chomp` user logic that is not being tested. Every method is fully tested, and every other file is reporting 100% coverage.
 
 ## Testing Hacker Rank Code Solution
 To run the code solution for the hacker rank solution you must:

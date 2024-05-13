@@ -1,3 +1,4 @@
+require 'spec_helper'
 require './lib/bot_2/grid_2'
 require './lib/bot_2/bot_saves_princess_2'
 
@@ -52,11 +53,11 @@ RSpec.describe BotSavesPrincess2 do
     let(:bsp_1) {BotSavesPrincess2.new(grid_1)}
     let(:bsp_2) {BotSavesPrincess2.new(grid_2)}
 
-    it 'can return first vertical and horizontal move for 5x5 grid' do
+    it 'can return first horizontal move for 5x5 grid' do
       expect(bsp_1.next_move).to eq("LEFT")
     end
 
-    it 'can return first vertical and horizontal move for 7x7 grid' do
+    it 'can return first vertical move for 7x7 grid' do
       expect(bsp_2.next_move).to eq("DOWN")
     end
   end 

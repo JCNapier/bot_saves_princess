@@ -1,3 +1,4 @@
+require 'spec_helper'
 require './lib/bot_2/grid_2' 
 
 RSpec.describe do 

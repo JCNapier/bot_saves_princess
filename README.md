@@ -127,7 +127,10 @@ To play the game, ```cd``` into the root directory of the repo and run the follo
 
 ## Running the Test Suite
 There are currently a total of 41 unit tests in this project. To run the test suite ```cd``` into the root directory of the repo and run the following terminal command: `bundle exec rspec spec`. You may also run the terminal command: `rspec`
-Currently the test coverage is 72.27% and that is only because of the `gets.chomp` user logic that is not being tested. Every method is fully tested, and every other file is reporting 100% coverage.
+- Currently the test coverage is 72.27% and that is only because of the `gets.chomp` user logic that is not being tested. Every method is fully tested, and every other file is reporting 100% coverage. 
+- You can open the coverage window in your browser by running the termincal command: `open coverage/index.html`
+
+![Screen Shot 2024-05-13 at 12 02 47 PM](https://github.com/simplecov-ruby/simplecov/assets/81737385/a17c0fb1-0b4d-43b0-a700-b3124381cd61)
 
 ## Testing Hacker Rank Code Solution
 To run the code solution for the hacker rank solution you must:

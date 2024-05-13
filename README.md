@@ -62,7 +62,7 @@ The links to each Hacker Rank Challege are below:
 - Demonstrate healthy commit habits.
 - Demonstrate proper use of GitHub Pull Requests
 - Demonstrate ability to deploy CircleCi
-- Demonstrate abiility to build a README using HTML and Markdown
+- Demonstrate ability to build a README using HTML and Markdown
 
 ----------
 

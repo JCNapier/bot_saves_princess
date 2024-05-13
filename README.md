@@ -16,6 +16,7 @@
       <ul>
         <li><a href="#versions">Versions</a></li>
         <li><a href="#gems">Gems</a></li>
+        <li><a href="#setup">Setup</a></li>
         </li>
       </ul>
     </li>
@@ -60,6 +61,8 @@ The links to each Hacker Rank Challege are below:
 - Demonstrate knowledge of Ruby, Design, Testing, Readability, Git, GitHub, & OOP
 - Demonstrate healthy commit habits.
 - Demonstrate proper use of GitHub Pull Requests
+- Demonstrate ability to deploy CircleCi
+- Demonstrate abiility to build a README using HTML and Markdown
 
 ----------
 
@@ -67,18 +70,24 @@ The links to each Hacker Rank Challege are below:
 
 ## Versions
 
-- ruby 2.7.2
+- [ruby 2.7.2](https://www.ruby-lang.org/en/news/2020/10/02/ruby-2-7-2-released/)
+- [circleci 2.1](https://discuss.circleci.com/t/circleci-2-1-config-overview/26057)
+- [docker_image cimg/ruby:3.3.1](https://circleci.com/developer/images/image/cimg/ruby)
 
 ----------
 
 ## Gems
 
-1. [RSpec 3.11](https://rubygems.org/gems/rspec/versions/3.11.0)
-- rspec-core 3.11.0
-- rspec-expectations 3.11.0
-- rspec-mocks 3.11.1
-- rspec-rails 5.1.2
-- rspec-support 3.11.0
+1. [RSpec 3.13](https://rubygems.org/gems/rspec/versions/3.13.0)
+  - rspec-core 3.13.0
+  - rspec-expectations 3.13.0
+  - rspec-mocks 3.13.1
+  - rspec-rails 5.1.2
+  - rspec-support 3.13.1
+
+## Setup 
+This repo makes use of a `Gemfile`. Run the following commands to install the Ruby Gems used, and create a `Gemfile.lock` file before interacting with the project or attempting to run the test suite:
+1. `bundle install`
 
 ----------
 
@@ -87,45 +96,46 @@ The links to each Hacker Rank Challege are below:
 ## File Structure
 This is a repo containing two separate projects. In this repo you will find the following file structure: 
 ```
-├── bot_1
-│   ├── lib
+├── lib
+│   ├── bot_1
 │   |    ├── bot_saves_princess.rb
 │   |    ├── game_play.rb
 │   |    ├── grid.rb
-│   ├── spec
-│   |    ├── bot_saves_princess_spec.rb
-│   |    ├── game_play_spec.rb
-│   |    ├── grid_spec.rb
-│   ├── bot_saves_princess_runner.rb
-│   ├── hacker_rank_solution.rb
-|
-├── bot_2
-│   ├── lib
+│   ├── bot_2
 │   |    ├── bot_saves_princess_2.rb
 │   |    ├── game_play_2.rb
 │   |    ├── grid_2.rb
-│   ├── spec
+|
+├── spec
+│   ├── bot_1_spec
+│   |    ├── bot_saves_princess_spec.rb
+│   |    ├── game_play_spec.rb
+│   |    ├── grid_spec.rb
+│   ├── bot_2_spec
 │   |    ├── bot_saves_princess_2_spec.rb
 │   |    ├── game_play_2_spec.rb
 │   |    ├── grid_2_spec.rb
-│   ├── bot_saves_princess_2_runner.rb
-│   ├── hacker_rank_solution_2.rb
+├── bot_saves_princess_runner_1.rb
+├── bot_saves_princess_runner_2.rb
+├── hacker_rank_solution_1.rb
+├── hacker_rank_solution_2.rb
 ```
 
 ## Playing the Game 
-To play the game, ```cd``` into the desired root directory of the game version you'd prefer to play (bot_1 or bot_2) and run the following terminal command: `ruby bot_saves_princess_runner.rb` or `ruby bot_saves_princess_runner_2.rb`
+To play the game, ```cd``` into the root directory of the repo and run the following terminal command: `ruby bot_saves_princess_runner_1.rb` or `ruby bot_saves_princess_runner_2.rb`
 
 ## Running the Test Suite
-To run the test suite for each version (bot_1 or bot_2), ```cd``` into the desired root directory of the game version you'd prefer to play (bot_1 or bot_2) and run the following terminal command: `rspec` 
+There are currently a total of 41 unit tests in this project. To run the test suite ```cd``` into the root directory of the repo and run the following terminal command: `bundle exec rspec spec`. You may also run the terminal command: `rspec`
 
 ## Testing Hacker Rank Code Solution
-There are a total of 41 unit tests in this project. To run the code solution for the hacker rank solution you must:
-1. ```cd``` into the desired root directory of the game version you'd prefer to test.
-2. Navigate to ```hacker_rank_solution.rb``` or ```hacker_rank_solution_2.rb```
+To run the code solution for the hacker rank solution you must:
+1. ```cd``` into the root directory of the repo.
+2. Navigate to ```hacker_rank_solution_1.rb``` or ```hacker_rank_solution_2.rb```
 3. Cope all code in the file **AS IS**
 4. Paste the code into the respectibe Hacker Rank Challenge
 5. On the Hacker Rank Challenge click ```Run Code``` at the bottom of the screen.
-6. You will see the grid at the bottom of the screen is displayed with a gold trophy. You can hit the "play" button to see the move of the game take place.
+6. You will see the grid at the bottom of the screen is displayed with a gold trophy. You can hit the "play" button to see the move(s) of the game take place.
+7. It will announce that you have won the game.
 
 ----------
 

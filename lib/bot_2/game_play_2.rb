@@ -1,7 +1,7 @@
-require './lib/grid_2'
-require './lib/bot_saves_princess_2'
+require './lib/bot_2/grid_2'
+require './lib/bot_2/bot_saves_princess_2'
 
-class GamePlay 
+class GamePlay2
   def play
     puts "Welcome to Bot Saves Princess 2" 
     sleep(2)
@@ -50,8 +50,8 @@ class GamePlay
     grid_with_bot = place_bot_in_grid(grid, bot_row, bot_column)
     finished_grid = place_princess_in_grid(grid_with_bot, princess_row, princess_column)
 
-    new_grid_object = Grid.new(size, bot_row, bot_column, finished_grid)
-    new_game = BotSavesPrincess.new(new_grid_object)
+    new_grid_object = Grid2.new(size, bot_row, bot_column, finished_grid)
+    new_game = BotSavesPrincess2.new(new_grid_object)
 
     puts "Here is the game board"
     puts finished_grid

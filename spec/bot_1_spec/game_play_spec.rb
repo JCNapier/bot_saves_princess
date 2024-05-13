@@ -1,4 +1,4 @@
-require './lib/game_play' 
+require './lib/bot_1/game_play'  
 
 RSpec.describe GamePlay do
   context 'build_grid' do

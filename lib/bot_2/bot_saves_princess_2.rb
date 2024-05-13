@@ -1,6 +1,6 @@
 require_relative 'grid_2'
 
-class BotSavesPrincess
+class BotSavesPrincess2
   attr_reader :grid
 
   def initialize(grid)

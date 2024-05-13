@@ -1,5 +1,5 @@
-require './lib/grid'
-require './lib/bot_saves_princess'
+require './lib/bot_1/grid'
+require './lib/bot_1/bot_saves_princess'
 
 RSpec.describe BotSavesPrincess do 
   context 'initialize' do

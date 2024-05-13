@@ -1,13 +1,13 @@
-require './lib/grid_2'
-require './lib/bot_saves_princess_2'
+require './lib/bot_2/grid_2'
+require './lib/bot_2/bot_saves_princess_2'
 
-RSpec.describe BotSavesPrincess do 
+RSpec.describe BotSavesPrincess2 do 
   context 'initialize' do
-    let(:grid) {Grid.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
-    let(:bsp) {BotSavesPrincess.new(grid)}
+    let(:grid) {Grid2.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
+    let(:bsp) {BotSavesPrincess2.new(grid)}
 
     it 'exists' do
-      expect(bsp).to be_a(BotSavesPrincess)
+      expect(bsp).to be_a(BotSavesPrincess2)
     end
 
     it 'has a grid attribute' do
@@ -16,10 +16,10 @@ RSpec.describe BotSavesPrincess do
   end
 
   context 'determine_character_location_differences' do
-    let(:grid_1) {Grid.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
-    let(:grid_2) {Grid.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
-    let(:bsp_1) {BotSavesPrincess.new(grid_1)}
-    let(:bsp_2) {BotSavesPrincess.new(grid_2)}
+    let(:grid_1) {Grid2.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
+    let(:grid_2) {Grid2.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
+    let(:bsp_1) {BotSavesPrincess2.new(grid_1)}
+    let(:bsp_2) {BotSavesPrincess2.new(grid_2)}
 
 
     it 'can determine the differences between the character locations 5x5 grid' do
@@ -32,10 +32,10 @@ RSpec.describe BotSavesPrincess do
   end
 
   context 'display_path_to_princess' do
-    let(:grid_1) {Grid.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
-    let(:grid_2) {Grid.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
-    let(:bsp_1) {BotSavesPrincess.new(grid_1)}
-    let(:bsp_2) {BotSavesPrincess.new(grid_2)}
+    let(:grid_1) {Grid2.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
+    let(:grid_2) {Grid2.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
+    let(:bsp_1) {BotSavesPrincess2.new(grid_1)}
+    let(:bsp_2) {BotSavesPrincess2.new(grid_2)}
 
     it 'can return first vertical and horizontal move for 5x5 grid' do
       expect(bsp_1.display_path_to_princess).to eq(["UP", "LEFT"])
@@ -47,10 +47,10 @@ RSpec.describe BotSavesPrincess do
   end 
 
     context 'next_move' do
-    let(:grid_1) {Grid.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
-    let(:grid_2) {Grid.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
-    let(:bsp_1) {BotSavesPrincess.new(grid_1)}
-    let(:bsp_2) {BotSavesPrincess.new(grid_2)}
+    let(:grid_1) {Grid2.new(5, 2, 3, ["-----", "-----","p--m-", "-----", "-----"])}
+    let(:grid_2) {Grid2.new(5, 2, 3, ["-------", "-------","---m---", "-------", "---p---", "-------", "-------"])}
+    let(:bsp_1) {BotSavesPrincess2.new(grid_1)}
+    let(:bsp_2) {BotSavesPrincess2.new(grid_2)}
 
     it 'can return first vertical and horizontal move for 5x5 grid' do
       expect(bsp_1.next_move).to eq("LEFT")

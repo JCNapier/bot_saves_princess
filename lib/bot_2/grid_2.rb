@@ -1,4 +1,4 @@
-class Grid
+class Grid2
   attr_reader :size, 
               :bot_location, 
               :grid,
